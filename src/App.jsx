@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 import beers from "./assets/data/beers.js";
+import CardList from "./components/CardList/CardList";
 
 const App = () => {
-  const [users, setUsers] = useState([]);
+  /* const [users, setUsers] = useState([]);
   const [numberOfUsers, setNumberOfUsers] = useState(5);
 
   const url = "https://punkapi.com/";
@@ -20,20 +21,12 @@ const App = () => {
 
   const handleInputChange = (event) => {
     setNumberOfUsers(event.target.value);
-  };
+  }; */
 
   return (
     <div className="app">
-      <h1>Random User Generator</h1>
-      <RangeInput
-        id="user-range"
-        label={`Number of users: ${numberOfUsers}`}
-        min={1}
-        max={10}
-        value={numberOfUsers}
-        onChange={handleInputChange}
-      />
-      <CardContainer cards={users} />
+      {console.log("app")}
+      <CardList beers={beers} />
     </div>
   );
 };
