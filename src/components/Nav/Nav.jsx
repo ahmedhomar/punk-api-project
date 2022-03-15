@@ -1,4 +1,14 @@
-import React, { useState } from "react";
+import SearchBox from "../SearchBox/SearchBox";
+
+const Nav = ({ beers }) => {
+  return (
+    <div className="main">
+      <SearchBox beers={beers} />
+    </div>
+  );
+};
+
+export default Nav;
 
 /* import SearchBox from "../../components/SearchBox/SearchBox";
 import AlbumTiles from "../../components/AlbumTiles/AlbumTiles";

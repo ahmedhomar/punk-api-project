@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 import beers from "./assets/data/beers.js";
-import CardList from "./components/CardList/CardList";
+import Main from "./components/Main/Main";
 
 const App = () => {
   /* const [users, setUsers] = useState([]);
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className="app">
       {console.log("app")}
-      <CardList beers={beers} />
+      <Main beers={beers} />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import Card from "../Card/Card";
+import "./CardList.scss";
 
 const CardList = ({ beers }) => {
   // make one card for each beer
