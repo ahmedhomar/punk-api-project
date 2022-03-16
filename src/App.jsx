@@ -1,32 +1,33 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
-import beers from "./assets/data/beers.js";
+// import beers from "./assets/data/beers.js";
 import Main from "./components/Main/Main";
 
 const App = () => {
-  /* const [users, setUsers] = useState([]);
-  const [numberOfUsers, setNumberOfUsers] = useState(5);
+  const [beers, setBeers] = useState([]);
+  const [numberOfBeers, setNumberOfBeers] = useState(6);
 
-  const url = "https://punkapi.com/";
+  const url = "https://api.punkapi.com/v2/beers";
 
-  const getUsers = async (resultNumber) => {
-    const res = await fetch(url + `?results=${resultNumber}`);
+  const getBeers = async (resultNumber) => {
+    const res = await fetch(url + `?per_page=${resultNumber}`);
     const data = await res.json();
-    setUsers(data.results);
+    console.log(data);
+    setBeers(data);
   };
 
   useEffect(() => {
-    getUsers(numberOfUsers);
-  }, [numberOfUsers]);
+    getBeers(numberOfBeers);
+  }, [numberOfBeers]);
 
-  const handleInputChange = (event) => {
-    setNumberOfUsers(event.target.value);
-  }; */
+  //  const handleInputChange = (event) => {
+  //    setNumberOfUsers(event.target.value);
+  //  };
 
   return (
     <div className="app">
       {console.log("app")}
-      <Main beers={beers} />
+      {<Main beerCards={beers} />}
     </div>
   );
 };

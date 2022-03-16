@@ -1,9 +1,10 @@
 import Card from "../Card/Card";
 import "./CardList.scss";
 
-const CardList = ({ beers }) => {
+const CardList = ({ beerCards }) => {
+  console.log(beerCards);
   // make one card for each beer
-  const beerCardJSX = beers.map((beer) => {
+  const beerCardJSX = beerCards.map((beer) => {
     return (
       <Card
         name={beer.name}

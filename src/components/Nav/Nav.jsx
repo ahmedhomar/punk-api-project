@@ -1,9 +1,12 @@
-import SearchBox from "../SearchBox/SearchBox";
+import "./Nav.scss";
 
+import SearchBox from "../SearchBox/SearchBox";
+import FiltersList from "../FiltersList/FiltersList";
 const Nav = ({ beers }) => {
   return (
     <div className="main">
       <SearchBox beers={beers} />
+      <FiltersList />
     </div>
   );
 };

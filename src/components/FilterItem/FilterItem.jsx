@@ -17,3 +17,5 @@ const FilterItem = () => {
     </div>
   );
 };
+
+export default FilterItem;

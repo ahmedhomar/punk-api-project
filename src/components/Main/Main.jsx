@@ -1,9 +1,9 @@
 import CardList from "../CardList/CardList";
 
-const Main = ({ beers }) => {
+const Main = ({ beerCards }) => {
   return (
     <div className="main">
-      <CardList beers={beers} />
+      <CardList beerCards={beerCards} />
     </div>
   );
 };
