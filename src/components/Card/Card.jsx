@@ -2,8 +2,6 @@ import React from "react";
 import "./Card.scss";
 
 const Card = ({ name, tagline, image_url, first_brewed, ph, abv }) => {
-  console.log("card comp");
-
   return (
     <div className="beers__card">
       <img src={image_url} className="beers__card__img" alt="" />

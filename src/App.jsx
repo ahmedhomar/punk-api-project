@@ -20,7 +20,7 @@ const App = () => {
   const getBeers = async (beerNumber) => {
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
+
     setBeersArr(data);
   };
 
@@ -73,7 +73,6 @@ const App = () => {
 
   return (
     <div className="app">
-      {console.log("app")}
       <Nav />
       <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
       <FiltersList
