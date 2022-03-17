@@ -11,7 +11,7 @@ const Nav = ({
   phFilter,
 }) => {
   return (
-    <div className="main">
+    <div className="nav">
       <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
       <FiltersList
         filterByABV={AbvFilter}
