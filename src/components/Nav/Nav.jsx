@@ -1,11 +1,11 @@
 import "./Nav.scss";
-
 import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
-const Nav = ({ beers }) => {
+
+const Nav = ({ beerCards }) => {
   return (
     <div className="main">
-      <SearchBox beers={beers} />
+      <SearchBox />
       <FiltersList />
     </div>
   );

@@ -7,6 +7,7 @@ const CardList = ({ beerCards }) => {
   const beerCardJSX = beerCards.map((beer) => {
     return (
       <Card
+        key={beer.id}
         name={beer.name}
         image_url={beer.image_url}
         description={beer.description}

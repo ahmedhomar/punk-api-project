@@ -1,3 +1,5 @@
+import "./SearchBox.scss";
+
 const SearchBox = ({ label, searchTerm, handleInput }) => {
   const capitalizedLabel = label[0].toUpperCase() + label.slice(1);
 
@@ -17,12 +19,4 @@ const SearchBox = ({ label, searchTerm, handleInput }) => {
   );
 };
 
-
-
-
-
 export default SearchBox;
-
-/* import React from "react";
-
-import "./SearchBox.scss";
