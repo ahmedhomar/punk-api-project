@@ -2,21 +2,10 @@ import "./Nav.scss";
 import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
 
-const Nav = ({
-  handleInput,
-  searchTerm,
-  classicRangeFilter,
-  AbvFilter,
-  phFilter,
-}) => {
+const Nav = ({}) => {
   return (
     <div className="nav">
-      <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
-      <FiltersList
-        filterByABV={AbvFilter}
-        filterByPH={phFilter}
-        classicRangeFilter={classicRangeFilter}
-      />
+      <h3>Punk API</h3>
     </div>
   );
 };

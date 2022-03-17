@@ -3,6 +3,9 @@ import "./App.scss";
 // import beers from "./assets/data/beers.js";
 import Main from "./components/Main/Main";
 import Nav from "./components/Nav/Nav";
+import CardList from "./components/CardList/CardList";
+import SearchBox from "./components/SearchBox/SearchBox";
+import FiltersList from "./components/FiltersList/FiltersList";
 
 const App = () => {
   const [beersArr, setBeersArr] = useState([]);
@@ -71,8 +74,13 @@ const App = () => {
   return (
     <div className="app">
       {console.log("app")}
-      <Main beersArr={beersArr} />
-      <Nav beersArr={filterBeers} />
+      <Nav />
+      <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
+      <FiltersList
+        abvFilter={abvFilter}
+        classicRangeFilter={classicRangeFilter}
+      />
+      <CardList beersArr={filterBeers} />
     </div>
   );
 };
