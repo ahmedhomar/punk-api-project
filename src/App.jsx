@@ -9,17 +9,23 @@ const App = () => {
   const [ph, setPh] = useState(false);
   const [abv, setAbv] = useState(false);
   const [classicRange, setClassicRange] = useState(false);
+const [numberOfBeers, setNumberOfBeers] = useState(6);
 
-  const url = "https://api.punkapi.com/v2/beers?per_page=80";
 
-  useEffect(() => {
-    const getBeers = async () => {
-      const res = await fetch(url);
+
+  const url = "https://api.punkapi.com/v2/beers";
+
+  
+    const getBeers = async (resultNumber) => {
+      const res = await fetch(url + `?per_page=${resultNumber}`);
       const data = await res.json();
       console.log(data);
       setBeersArr(data);
     };
-    }, [])
+
+    useEffect(() => {
+      getBeers(numberOfBeers);
+    }, [numberOfBeers]);
 
   const phFilter = () => {
       setPh(!ph)
@@ -33,34 +39,35 @@ const App = () => {
     setClassicRange(!classicRange)
 }
 
+const handleInput = event => {
+  const inputValue = event.target.value.toLowerCase();
+  setSearchTerm(inputValue);
+  setNumberOfUsers(event.target.value);
+}
+
+const filterBeers = beersArray.filter(result => {
+  let beerHasMatched = true;
+
+  if (searchTerm) {
+    beerHasMatched = result.name.toLowerCase().includes(searchTerm);
+  }
+
+  if (abv) {
+    beerHasMatched = beerHasMatched && result.abv > 6;
+  }
+
+  if (ph) {
+    beerHasMatched = beerHasMatched && result.ph < 4;
+  }
+
+  return beerHasMatched;
+});
+
+ 
+
+
 
   
-
- /*  useEffect(() => {
-    getBeers(numberOfBeers);
-  }, [numberOfBeers]);
-
-  const abvFilter = async (resultNumber) => {
-    const res = await fetch(url + `?abv_gt=6`);
-    const data = await res.json();
-    console.log(data);
-    setBeers(data);
-  };
-
-  const classicFilter = async (resultNumber) => {
-    const res = await fetch(url + `?brewed_before=01-2010`);
-    const data = await res.json();
-    console.log(data);
-    setBeers(data);
-  }; */
-
-
-
-  const handleInput = event => {
-    const cleanInput = event.target.value.toLowerCase();
-    setSearchTerm(cleanInput);
-   
-  };
 
   
 
