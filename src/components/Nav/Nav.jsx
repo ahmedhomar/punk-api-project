@@ -2,11 +2,22 @@ import "./Nav.scss";
 import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
 
-const Nav = ({ beerCards }) => {
+const Nav = ({
+  beerCards,
+  handleInput,
+  searchTerm,
+  classicRangeFilter,
+  AbvFilter,
+  phFilter,
+}) => {
   return (
     <div className="main">
-      <SearchBox />
-      <FiltersList />
+      <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
+      <FiltersList
+        filterByABV={AbvFilter}
+        filterByPH={phFilter}
+        classicRangeFilter={classicRangeFilter}
+      />
     </div>
   );
 };
