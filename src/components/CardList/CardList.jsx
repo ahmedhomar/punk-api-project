@@ -18,7 +18,7 @@ const CardList = ({ beersArr }) => {
     );
   });
 
-  return <main className="main">{beersArrJSX}</main>;
+  return <div className="card-list">{beersArrJSX}</div>;
 };
 
 export default CardList;

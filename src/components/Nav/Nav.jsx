@@ -3,7 +3,6 @@ import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
 
 const Nav = ({
-  beerCards,
   handleInput,
   searchTerm,
   classicRangeFilter,

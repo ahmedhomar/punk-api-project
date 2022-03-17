@@ -1,9 +1,10 @@
+import "./Main.scss";
 import CardList from "../CardList/CardList";
 
-const Main = ({ beersArr, filterBeers }) => {
+const Main = ({ beersArr }) => {
   return (
     <div className="main">
-      <CardList beersArr={filterBeers} />
+      <CardList beersArr={beersArr} />
     </div>
   );
 };
