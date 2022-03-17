@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 // import beers from "./assets/data/beers.js";
-import Main from "./components/Main/Main";
+
 import Nav from "./components/Nav/Nav";
 import CardList from "./components/CardList/CardList";
 import SearchBox from "./components/SearchBox/SearchBox";
@@ -15,10 +15,10 @@ const App = () => {
   const [classicRange, setClassicRange] = useState(false);
   const [numberOfBeers, setNumberOfBeers] = useState(6);
 
-  const url = "https://api.punkapi.com/v2/beers";
+  const url = "https://api.punkapi.com/v2/beers?per_page=80";
 
   const getBeers = async (beerNumber) => {
-    const res = await fetch(url + `?per_page=${beerNumber}`);
+    const res = await fetch(url);
     const data = await res.json();
     console.log(data);
     setBeersArr(data);
