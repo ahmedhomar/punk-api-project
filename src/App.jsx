@@ -78,6 +78,7 @@ const App = () => {
       <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
       <FiltersList
         abvFilter={abvFilter}
+        phFilter={phFilter}
         classicRangeFilter={classicRangeFilter}
       />
       <CardList beersArr={filterBeers} />

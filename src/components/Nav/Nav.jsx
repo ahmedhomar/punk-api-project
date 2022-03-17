@@ -1,8 +1,6 @@
 import "./Nav.scss";
-import SearchBox from "../SearchBox/SearchBox";
-import FiltersList from "../FiltersList/FiltersList";
 
-const Nav = ({}) => {
+const Nav = () => {
   return (
     <div className="nav">
       <h3>Punk API</h3>

@@ -20,7 +20,7 @@ const FiltersList = ({ abvFilter, phFilter, classicRangeFilter }) => {
             id="cr"
             name="cr"
           />
-          <label htmlFor="ph"> Classic Range (pH {"<"} 4.0%)</label>
+          <label htmlFor="ph"> Classic Range</label>
         </div>
       </div>
     </div>
