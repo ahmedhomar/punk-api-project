@@ -1,21 +1,28 @@
 import React from "react";
 import "./Card.scss";
 
-const Card = ({ name, tagline, description, image_url }) => {
+const Card = ({ name, tagline, image_url, first_brewed, ph, abv }) => {
   console.log("card comp");
 
   return (
-    <>
-      <div className="beer-info">
-        <img className="beer-info__img" src={image_url} alt={name} />
-      </div>
-      <div className="beer-info__content">
-        <h2 className="beer-info__heading"> {name}</h2>
-        <h3 className="beer-info__tag"> {tagline}</h3>
-        <p className="beer-info__desc"> {description}</p>
-      </div>
-    </>
-  );
+   
+<div className="beer-card">
+<img className="beer-card__img" src={image_url} alt={name} />
+
+<h3 className="beer-card__heading"> {name}</h3>
+<p className="beer-card__tag"> {tagline}</p>
+
+<p>Brewed in: {first_brewed} </p>
+<h5>Ph: {ph}</h5>
+<h5>Abv: {abv}</h5>
+<div/>
+ 
+  )
 };
 
+
+
 export default Card;
+
+
+
